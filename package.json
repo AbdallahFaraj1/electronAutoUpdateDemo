@@ -1,0 +1,33 @@
+{
+  "name": "electrondemo1",
+  "version": "1.0.0",
+  "description": "demo app",
+  "main": "main.js",
+  "author": "Abdallah Faraj",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "watch": "nodemon --exec 'electron .'",
+    "win": "electron-builder -w",
+    "make-cert": "electron-builder create-self-signed-cert -p abdallah"
+  },
+  "build": {
+    "appId": "com.abdallah.electrondemo1",
+    "directories": {
+      "buildResources": "."
+    },
+    "win": {
+      "certificateFile": "private/abdallah.pfx",
+      "verifyUpdateCodeSignature": false,
+      "publisherName": "abdallah"
+    }
+  },
+  "devDependencies": {
+    "electron": "^19.0.10",
+    "electron-builder": "^23.3.3",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "electron-updater": "^5.2.1"
+  }
+}
