@@ -17,6 +17,9 @@
       "buildResources": "."
     },
     "win": {
+      "publish": [
+        "github"
+      ],
       "certificateFile": "private/abdallah.pfx",
       "verifyUpdateCodeSignature": false,
       "publisherName": "abdallah"
